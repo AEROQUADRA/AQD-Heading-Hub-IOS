@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		780EA8192C90679800528E9C /* ArucoDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780EA8182C90679800528E9C /* ArucoDetectionView.swift */; };
 		78A4D6652C90664500122991 /* AQD_Heading_Hub_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4D6642C90664500122991 /* AQD_Heading_Hub_IOSApp.swift */; };
 		78A4D6672C90664500122991 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4D6662C90664500122991 /* ContentView.swift */; };
 		78A4D6692C90664700122991 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A4D6682C90664700122991 /* Assets.xcassets */; };
@@ -15,10 +14,11 @@
 		78AD74D32C909E0300B666D1 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AD74CE2C909DCC00B666D1 /* opencv2.framework */; };
 		78AD74DE2C90A77700B666D1 /* ArucoCV.h in Headers */ = {isa = PBXBuildFile; fileRef = 78AD74DC2C90A77700B666D1 /* ArucoCV.h */; };
 		78AD74DF2C90A77700B666D1 /* ArucoCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78AD74DD2C90A77700B666D1 /* ArucoCV.mm */; };
+		78C937982C90EA17000E5A9C /* MarkerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C937972C90EA17000E5A9C /* MarkerDetailView.swift */; };
+		78C9379A2C90ECFE000E5A9C /* ArucoDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C937992C90ECFE000E5A9C /* ArucoDetectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		780EA8182C90679800528E9C /* ArucoDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArucoDetectionView.swift; sourceTree = "<group>"; };
 		78A4D6612C90664500122991 /* AQD-Heading-Hub-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AQD-Heading-Hub-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		78A4D6642C90664500122991 /* AQD_Heading_Hub_IOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQD_Heading_Hub_IOSApp.swift; sourceTree = "<group>"; };
 		78A4D6662C90664500122991 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -29,6 +29,8 @@
 		78AD74DB2C90A77500B666D1 /* AQD-Heading-Hub-IOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AQD-Heading-Hub-IOS-Bridging-Header.h"; sourceTree = "<group>"; };
 		78AD74DC2C90A77700B666D1 /* ArucoCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArucoCV.h; sourceTree = "<group>"; };
 		78AD74DD2C90A77700B666D1 /* ArucoCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ArucoCV.mm; sourceTree = "<group>"; };
+		78C937972C90EA17000E5A9C /* MarkerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerDetailView.swift; sourceTree = "<group>"; };
+		78C937992C90ECFE000E5A9C /* ArucoDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArucoDetectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,11 +74,12 @@
 		78A4D6632C90664500122991 /* AQD-Heading-Hub-IOS */ = {
 			isa = PBXGroup;
 			children = (
+				78A4D6662C90664500122991 /* ContentView.swift */,
+				78C937992C90ECFE000E5A9C /* ArucoDetectionView.swift */,
+				78C937972C90EA17000E5A9C /* MarkerDetailView.swift */,
 				78AD74DC2C90A77700B666D1 /* ArucoCV.h */,
 				78AD74DD2C90A77700B666D1 /* ArucoCV.mm */,
 				78A4D6642C90664500122991 /* AQD_Heading_Hub_IOSApp.swift */,
-				78A4D6662C90664500122991 /* ContentView.swift */,
-				780EA8182C90679800528E9C /* ArucoDetectionView.swift */,
 				78A4D6682C90664700122991 /* Assets.xcassets */,
 				78A4D66A2C90664700122991 /* Preview Content */,
 				78AD74DB2C90A77500B666D1 /* AQD-Heading-Hub-IOS-Bridging-Header.h */,
@@ -186,8 +189,9 @@
 			files = (
 				78A4D6672C90664500122991 /* ContentView.swift in Sources */,
 				78AD74DF2C90A77700B666D1 /* ArucoCV.mm in Sources */,
+				78C937982C90EA17000E5A9C /* MarkerDetailView.swift in Sources */,
+				78C9379A2C90ECFE000E5A9C /* ArucoDetectionView.swift in Sources */,
 				78A4D6652C90664500122991 /* AQD_Heading_Hub_IOSApp.swift in Sources */,
-				780EA8192C90679800528E9C /* ArucoDetectionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

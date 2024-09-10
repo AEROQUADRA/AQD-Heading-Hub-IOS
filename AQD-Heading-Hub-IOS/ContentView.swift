@@ -1,17 +1,19 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var detectedMarker: (id: Int, distance: Double)? = nil
+
     var body: some View {
         NavigationView {
             VStack {
-                Image(systemName: "globe")
+                Image(systemName: "camera.viewfinder")
                     .imageScale(.large)
-                    .foregroundStyle(.tint)
-                Text("Hello, world!")
-                
-                // Button to navigate to the ArUco detection screen
-                NavigationLink(destination: ArucoDetectionView()) {
-                    Text("Detect ArUco")
+                    .foregroundColor(.blue)
+                Text("Detect ArUco Marker")
+
+                // Navigate to ArucoDetectionView
+                NavigationLink(destination: ArucoDetectionView(detectedMarker: $detectedMarker)) {
+                    Text("Start ArUco Detection")
                         .padding()
                         .background(Color.blue)
                         .foregroundColor(.white)

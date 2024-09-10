@@ -4,6 +4,7 @@ import AVFoundation
 // UIViewControllerRepresentable for Aruco Detection
 struct ArucoDetectionView: UIViewControllerRepresentable {
     @Binding var detectedMarker: (id: Int, distance: Double)?
+    @Binding var isShowingMarkerDetails: Bool // To track when to show the details
 
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
@@ -30,16 +31,8 @@ struct ArucoDetectionView: UIViewControllerRepresentable {
         // Handle marker detection, navigation, and view dismissal
         func handleMarkerDetected(markerId: Int, markerDistance: Double) {
             DispatchQueue.main.async {
-                let markerDetailView = MarkerDetailView(markerID: markerId, distance: markerDistance)
-                let hostingController = UIHostingController(rootView: markerDetailView)
-                
-                // Present the marker details view and dismiss the detection view after presentation
-                if let rootVC = UIApplication.shared.windows.first?.rootViewController {
-                    rootVC.present(hostingController, animated: true) {
-                        // Dismiss ArucoDetectionView once the MarkerDetailView is shown
-                        UIApplication.shared.windows.first?.rootViewController?.dismiss(animated: true, completion: nil)
-                    }
-                }
+                // When a marker is detected, set the state to show marker details
+                self.parent.isShowingMarkerDetails = true
             }
         }
     }
@@ -111,9 +104,6 @@ class ArucoDetectionViewController: UIViewController, AVCaptureVideoDataOutputSa
 
         let detectedMarkers = ArucoCV.detectMarkers(inFrame: pixelBuffer)
 
-        print("Type of detectedMarkers: \(type(of: detectedMarkers))")
-        print("Contents of detectedMarkers: \(detectedMarkers)")
-
         // Properly cast elements of NSArray
         for marker in detectedMarkers {
             if let markerDict = marker as? [String: Any],
@@ -121,7 +111,7 @@ class ArucoDetectionViewController: UIViewController, AVCaptureVideoDataOutputSa
                let distance = markerDict["distance"] as? Double {
                 print("Marker detected! ID: \(id), Distance: \(distance)")
                 self.isDetecting = false // Safely stop further detection
-                
+
                 // Stop detecting as soon as marker is found
                 DispatchQueue.main.sync {
                     print("isDetecting set to false. Stopping further detection.")
@@ -135,3 +125,4 @@ class ArucoDetectionViewController: UIViewController, AVCaptureVideoDataOutputSa
         }
     }
 }
+

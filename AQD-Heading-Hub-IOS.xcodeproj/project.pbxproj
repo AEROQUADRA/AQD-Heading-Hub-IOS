@@ -16,6 +16,7 @@
 		78AD74DF2C90A77700B666D1 /* ArucoCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78AD74DD2C90A77700B666D1 /* ArucoCV.mm */; };
 		78C937982C90EA17000E5A9C /* MarkerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C937972C90EA17000E5A9C /* MarkerDetailView.swift */; };
 		78C9379A2C90ECFE000E5A9C /* ArucoDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C937992C90ECFE000E5A9C /* ArucoDetectionView.swift */; };
+		78C9379E2C910214000E5A9C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9379D2C910214000E5A9C /* NetworkService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		78AD74DD2C90A77700B666D1 /* ArucoCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ArucoCV.mm; sourceTree = "<group>"; };
 		78C937972C90EA17000E5A9C /* MarkerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerDetailView.swift; sourceTree = "<group>"; };
 		78C937992C90ECFE000E5A9C /* ArucoDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArucoDetectionView.swift; sourceTree = "<group>"; };
+		78C9379D2C910214000E5A9C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +81,7 @@
 				78C937972C90EA17000E5A9C /* MarkerDetailView.swift */,
 				78AD74DC2C90A77700B666D1 /* ArucoCV.h */,
 				78AD74DD2C90A77700B666D1 /* ArucoCV.mm */,
+				78C9379D2C910214000E5A9C /* NetworkService.swift */,
 				78A4D6642C90664500122991 /* AQD_Heading_Hub_IOSApp.swift */,
 				78A4D6682C90664700122991 /* Assets.xcassets */,
 				78A4D66A2C90664700122991 /* Preview Content */,
@@ -191,6 +194,7 @@
 				78AD74DF2C90A77700B666D1 /* ArucoCV.mm in Sources */,
 				78C937982C90EA17000E5A9C /* MarkerDetailView.swift in Sources */,
 				78C9379A2C90ECFE000E5A9C /* ArucoDetectionView.swift in Sources */,
+				78C9379E2C910214000E5A9C /* NetworkService.swift in Sources */,
 				78A4D6652C90664500122991 /* AQD_Heading_Hub_IOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +345,7 @@
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/AQD-Heading-Hub-IOS/Frameworks/opencv2.framework/Headers";
 				INFOPLIST_KEY_CFBundleDisplayName = "AQD HUB IOS";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to scan ArUco markers.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires access to your location to show the connected WiFi network.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -386,6 +391,7 @@
 				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/AQD-Heading-Hub-IOS/Frameworks/opencv2.framework/Headers";
 				INFOPLIST_KEY_CFBundleDisplayName = "AQD HUB IOS";
 				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to scan ArUco markers.";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "This app requires access to your location to show the connected WiFi network.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

@@ -3,6 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var detectedMarker: (id: Int, distance: Double)? = nil
     @State private var isShowingMarkerDetails = false
+    @StateObject private var networkService = NetworkService() // Add network service for monitoring
 
     var body: some View {
         NavigationView {
@@ -30,6 +31,14 @@ struct ContentView: View {
                         EmptyView()
                     }
                 }
+
+                // Display WiFi network information
+                VStack {
+                    Text("Connected SSID: \(networkService.connectedSSID)")
+                    Text("Connected IP: \(networkService.connectedIP)")
+                }
+                .padding()
+                .foregroundColor(.gray)
             }
             .padding()
         }

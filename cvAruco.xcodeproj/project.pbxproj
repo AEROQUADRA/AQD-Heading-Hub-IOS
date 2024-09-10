@@ -1,0 +1,463 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		78AD74E12C90B1F300B666D1 /* DetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AD74E02C90B1F200B666D1 /* DetectionViewController.swift */; };
+		78AD74E72C90B6AA00B666D1 /* SKWorldTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 78AD74E62C90B6AA00B666D1 /* SKWorldTransform.m */; };
+		78AD74E92C90B7D400B666D1 /* AQD_Heading_Hub_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AD74E82C90B7D400B666D1 /* AQD_Heading_Hub_IOSApp.swift */; };
+		78AD74EB2C90B82600B666D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AD74EA2C90B82600B666D1 /* ContentView.swift */; };
+		78C2C8182C8E60320071F009 /* opencv in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = CA2273D8224AD7F7009884EC /* opencv */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		78C2C8302C8E61B70071F009 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C2C81C2C8E61A40071F009 /* opencv2.framework */; };
+		CA1A9D932249D1B300EDE121 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1A9D922249D1B300EDE121 /* art.scnassets */; };
+		CA1A9D9A2249D1B300EDE121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1A9D992249D1B300EDE121 /* Assets.xcassets */; };
+		CA1A9DB32249DA1800EDE121 /* UIColor+HSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = CA1A9DB22249DA1800EDE121 /* UIColor+HSV.swift */; };
+		CAB6B8AD224AD850005F49FD /* ArucoCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = CAB6B8AC224AD850005F49FD /* ArucoCV.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		78C2C8192C8E60320071F009 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				78C2C8182C8E60320071F009 /* opencv in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		78AD74E02C90B1F200B666D1 /* DetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionViewController.swift; sourceTree = "<group>"; };
+		78AD74E52C90B6AA00B666D1 /* SKWorldTransform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKWorldTransform.h; sourceTree = "<group>"; };
+		78AD74E62C90B6AA00B666D1 /* SKWorldTransform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKWorldTransform.m; sourceTree = "<group>"; };
+		78AD74E82C90B7D400B666D1 /* AQD_Heading_Hub_IOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQD_Heading_Hub_IOSApp.swift; sourceTree = "<group>"; };
+		78AD74EA2C90B82600B666D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		78C2C81A2C8E61A40071F009 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		78C2C81C2C8E61A40071F009 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		78C2C81E2C8E61A40071F009 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		78C2C81F2C8E61A40071F009 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		78C2C8202C8E61A40071F009 /* ArucoConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArucoConstants.swift; sourceTree = "<group>"; };
+		78C2C8212C8E61A40071F009 /* ArucoCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArucoCV.h; sourceTree = "<group>"; };
+		78C2C8222C8E61A40071F009 /* ArucoCV.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ArucoCV.mm; sourceTree = "<group>"; };
+		78C2C8232C8E61A40071F009 /* ArucoNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArucoNode.swift; sourceTree = "<group>"; };
+		78C2C8242C8E61A40071F009 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78C2C8252C8E61A40071F009 /* cvAruco-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cvAruco-Bridging-Header.h"; sourceTree = "<group>"; };
+		78C2C8262C8E61A40071F009 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		78C2C8272C8E61A40071F009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		78C2C8292C8E61A40071F009 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		78C2C82B2C8E61A40071F009 /* SKWorldTransform.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SKWorldTransform.h; sourceTree = "<group>"; };
+		78C2C82C2C8E61A40071F009 /* SKWorldTransform.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SKWorldTransform.m; sourceTree = "<group>"; };
+		78C2C82D2C8E61A40071F009 /* UIColor+HSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HSV.swift"; sourceTree = "<group>"; };
+		78C2C82E2C8E61A40071F009 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CA1A9D8D2249D1B300EDE121 /* cvAruco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cvAruco.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA1A9D922249D1B300EDE121 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
+		CA1A9D992249D1B300EDE121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CA1A9D9E2249D1B300EDE121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA1A9DA42249D5FA00EDE121 /* cvAruco-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cvAruco-Bridging-Header.h"; sourceTree = "<group>"; };
+		CA1A9DB22249DA1800EDE121 /* UIColor+HSV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HSV.swift"; sourceTree = "<group>"; };
+		CA2273D8224AD7F7009884EC /* opencv */ = {isa = PBXFileReference; lastKnownFileType = folder; path = opencv; sourceTree = "<group>"; };
+		CA9A40B8224AB09F0065D169 /* ArucoCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArucoCV.h; sourceTree = "<group>"; };
+		CA9A40C0224AD0890065D169 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = cvAruco/opencv/opencv2.framework; sourceTree = "<group>"; };
+		CAB6B8AC224AD850005F49FD /* ArucoCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ArucoCV.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CA1A9D8A2249D1B300EDE121 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78C2C8302C8E61B70071F009 /* opencv2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		78C2C81B2C8E61A40071F009 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78C2C81A2C8E61A40071F009 /* opencv2.framework */,
+			);
+			path = Frameworks;
+			sourceTree = "<group>";
+		};
+		78C2C81D2C8E61A40071F009 /* opencv */ = {
+			isa = PBXGroup;
+			children = (
+				78C2C81B2C8E61A40071F009 /* Frameworks */,
+				78C2C81C2C8E61A40071F009 /* opencv2.framework */,
+			);
+			path = opencv;
+			sourceTree = "<group>";
+		};
+		78C2C82F2C8E61A40071F009 /* cvAruco */ = {
+			isa = PBXGroup;
+			children = (
+				78C2C81D2C8E61A40071F009 /* opencv */,
+				78C2C81E2C8E61A40071F009 /* AppDelegate.swift */,
+				78C2C81F2C8E61A40071F009 /* art.scnassets */,
+				78C2C8202C8E61A40071F009 /* ArucoConstants.swift */,
+				78C2C8212C8E61A40071F009 /* ArucoCV.h */,
+				78C2C8222C8E61A40071F009 /* ArucoCV.mm */,
+				78C2C8232C8E61A40071F009 /* ArucoNode.swift */,
+				78C2C8242C8E61A40071F009 /* Assets.xcassets */,
+				78C2C8252C8E61A40071F009 /* cvAruco-Bridging-Header.h */,
+				78C2C8262C8E61A40071F009 /* Info.plist */,
+				78C2C8282C8E61A40071F009 /* LaunchScreen.storyboard */,
+				78C2C82A2C8E61A40071F009 /* Main.storyboard */,
+				78C2C82B2C8E61A40071F009 /* SKWorldTransform.h */,
+				78C2C82C2C8E61A40071F009 /* SKWorldTransform.m */,
+				78C2C82D2C8E61A40071F009 /* UIColor+HSV.swift */,
+				78C2C82E2C8E61A40071F009 /* ViewController.swift */,
+			);
+			path = cvAruco;
+			sourceTree = "<group>";
+		};
+		CA1A9D842249D1B300EDE121 = {
+			isa = PBXGroup;
+			children = (
+				CA1A9D8F2249D1B300EDE121 /* cvAruco */,
+				CA1A9D8E2249D1B300EDE121 /* Products */,
+				CA9A40BF224AD0890065D169 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CA1A9D8E2249D1B300EDE121 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CA1A9D8D2249D1B300EDE121 /* cvAruco.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CA1A9D8F2249D1B300EDE121 /* cvAruco */ = {
+			isa = PBXGroup;
+			children = (
+				CA2273D8224AD7F7009884EC /* opencv */,
+				CA9A40B8224AB09F0065D169 /* ArucoCV.h */,
+				78AD74E52C90B6AA00B666D1 /* SKWorldTransform.h */,
+				78AD74E62C90B6AA00B666D1 /* SKWorldTransform.m */,
+				CAB6B8AC224AD850005F49FD /* ArucoCV.mm */,
+				CA1A9DB22249DA1800EDE121 /* UIColor+HSV.swift */,
+				78AD74E02C90B1F200B666D1 /* DetectionViewController.swift */,
+				78AD74EA2C90B82600B666D1 /* ContentView.swift */,
+				78AD74E82C90B7D400B666D1 /* AQD_Heading_Hub_IOSApp.swift */,
+				CA1A9D992249D1B300EDE121 /* Assets.xcassets */,
+				CA1A9D922249D1B300EDE121 /* art.scnassets */,
+				CA1A9D9E2249D1B300EDE121 /* Info.plist */,
+				CA1A9DA42249D5FA00EDE121 /* cvAruco-Bridging-Header.h */,
+			);
+			path = cvAruco;
+			sourceTree = "<group>";
+		};
+		CA9A40BF224AD0890065D169 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78C2C82F2C8E61A40071F009 /* cvAruco */,
+				CA9A40C0224AD0890065D169 /* opencv2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CA1A9D8C2249D1B300EDE121 /* cvAruco */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CA1A9DA12249D1B300EDE121 /* Build configuration list for PBXNativeTarget "cvAruco" */;
+			buildPhases = (
+				CA1A9D892249D1B300EDE121 /* Sources */,
+				CA1A9D8A2249D1B300EDE121 /* Frameworks */,
+				CA1A9D8B2249D1B300EDE121 /* Resources */,
+				78C2C8192C8E60320071F009 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cvAruco;
+			productName = cvAruco;
+			productReference = CA1A9D8D2249D1B300EDE121 /* cvAruco.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CA1A9D852249D1B300EDE121 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1010;
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Dan Park";
+				TargetAttributes = {
+					CA1A9D8C2249D1B300EDE121 = {
+						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
+					};
+				};
+			};
+			buildConfigurationList = CA1A9D882249D1B300EDE121 /* Build configuration list for PBXProject "cvAruco" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CA1A9D842249D1B300EDE121;
+			productRefGroup = CA1A9D8E2249D1B300EDE121 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CA1A9D8C2249D1B300EDE121 /* cvAruco */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CA1A9D8B2249D1B300EDE121 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CA1A9D932249D1B300EDE121 /* art.scnassets in Resources */,
+				CA1A9D9A2249D1B300EDE121 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CA1A9D892249D1B300EDE121 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78AD74E12C90B1F300B666D1 /* DetectionViewController.swift in Sources */,
+				CAB6B8AD224AD850005F49FD /* ArucoCV.mm in Sources */,
+				78AD74E92C90B7D400B666D1 /* AQD_Heading_Hub_IOSApp.swift in Sources */,
+				78AD74EB2C90B82600B666D1 /* ContentView.swift in Sources */,
+				CA1A9DB32249DA1800EDE121 /* UIColor+HSV.swift in Sources */,
+				78AD74E72C90B6AA00B666D1 /* SKWorldTransform.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		78C2C8282C8E61A40071F009 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78C2C8272C8E61A40071F009 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		78C2C82A2C8E61A40071F009 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				78C2C8292C8E61A40071F009 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CA1A9D9F2249D1B300EDE121 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CA1A9DA02249D1B300EDE121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CA1A9DA22249D1B300EDE121 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VFSH7UV2L2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/cvAruco/opencv",
+				);
+				INFOPLIST_FILE = cvAruco/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aqd.hd;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "cvAruco/cvAruco-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CA1A9DA32249D1B300EDE121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = VFSH7UV2L2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/cvAruco/opencv",
+				);
+				INFOPLIST_FILE = cvAruco/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aqd.hd;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "cvAruco/cvAruco-Bridging-Header.h";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CA1A9D882249D1B300EDE121 /* Build configuration list for PBXProject "cvAruco" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1A9D9F2249D1B300EDE121 /* Debug */,
+				CA1A9DA02249D1B300EDE121 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CA1A9DA12249D1B300EDE121 /* Build configuration list for PBXNativeTarget "cvAruco" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CA1A9DA22249D1B300EDE121 /* Debug */,
+				CA1A9DA32249D1B300EDE121 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CA1A9D852249D1B300EDE121 /* Project object */;
+}

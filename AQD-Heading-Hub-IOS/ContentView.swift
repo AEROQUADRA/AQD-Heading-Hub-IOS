@@ -3,7 +3,7 @@ import SwiftUI
 struct ContentView: View {
     @State private var detectedMarker: (id: Int, distance: Double)? = nil
     @State private var isShowingMarkerDetails = false
-    @StateObject private var networkService = NetworkService() // Add network service for monitoring
+    @StateObject private var networkService = NetworkService()  // Network Monitoring
 
     var body: some View {
         NavigationView {
@@ -39,6 +39,15 @@ struct ContentView: View {
                 }
                 .padding()
                 .foregroundColor(.gray)
+
+                // Button to navigate to CommandsView
+                NavigationLink(destination: CommandsView()) {
+                    Text("Commands")
+                        .padding()
+                        .background(Color.green)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
             }
             .padding()
         }

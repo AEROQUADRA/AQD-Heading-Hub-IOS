@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		780EA8192C90679800528E9C /* ArucoDetectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780EA8182C90679800528E9C /* ArucoDetectionView.swift */; };
+		78A4D6652C90664500122991 /* AQD_Heading_Hub_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4D6642C90664500122991 /* AQD_Heading_Hub_IOSApp.swift */; };
+		78A4D6672C90664500122991 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A4D6662C90664500122991 /* ContentView.swift */; };
+		78A4D6692C90664700122991 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A4D6682C90664700122991 /* Assets.xcassets */; };
+		78A4D66C2C90664700122991 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78A4D66B2C90664700122991 /* Preview Assets.xcassets */; };
+		78AD74D32C909E0300B666D1 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78AD74CE2C909DCC00B666D1 /* opencv2.framework */; };
+		78AD74DE2C90A77700B666D1 /* ArucoCV.h in Headers */ = {isa = PBXBuildFile; fileRef = 78AD74DC2C90A77700B666D1 /* ArucoCV.h */; };
+		78AD74DF2C90A77700B666D1 /* ArucoCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78AD74DD2C90A77700B666D1 /* ArucoCV.mm */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		780EA8182C90679800528E9C /* ArucoDetectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArucoDetectionView.swift; sourceTree = "<group>"; };
+		78A4D6612C90664500122991 /* AQD-Heading-Hub-IOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AQD-Heading-Hub-IOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		78A4D6642C90664500122991 /* AQD_Heading_Hub_IOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQD_Heading_Hub_IOSApp.swift; sourceTree = "<group>"; };
+		78A4D6662C90664500122991 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		78A4D6682C90664700122991 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		78A4D66B2C90664700122991 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		78AD74CC2C909D6C00B666D1 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = opencv2.framework; path = "AQD-Heading-Hub-IOS/Frameworks/opencv2.framework"; sourceTree = "<group>"; };
+		78AD74CE2C909DCC00B666D1 /* opencv2.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = opencv2.framework; sourceTree = "<group>"; };
+		78AD74DB2C90A77500B666D1 /* AQD-Heading-Hub-IOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AQD-Heading-Hub-IOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		78AD74DC2C90A77700B666D1 /* ArucoCV.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArucoCV.h; sourceTree = "<group>"; };
+		78AD74DD2C90A77700B666D1 /* ArucoCV.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ArucoCV.mm; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		78A4D65E2C90664500122991 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78AD74D32C909E0300B666D1 /* opencv2.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		780EA8222C906C9900528E9C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78AD74CF2C909DCC00B666D1 /* Frameworks */,
+				78AD74CC2C909D6C00B666D1 /* opencv2.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78A4D6582C90664500122991 = {
+			isa = PBXGroup;
+			children = (
+				78A4D6632C90664500122991 /* AQD-Heading-Hub-IOS */,
+				78A4D6622C90664500122991 /* Products */,
+				780EA8222C906C9900528E9C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		78A4D6622C90664500122991 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				78A4D6612C90664500122991 /* AQD-Heading-Hub-IOS.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		78A4D6632C90664500122991 /* AQD-Heading-Hub-IOS */ = {
+			isa = PBXGroup;
+			children = (
+				78AD74DC2C90A77700B666D1 /* ArucoCV.h */,
+				78AD74DD2C90A77700B666D1 /* ArucoCV.mm */,
+				78A4D6642C90664500122991 /* AQD_Heading_Hub_IOSApp.swift */,
+				78A4D6662C90664500122991 /* ContentView.swift */,
+				780EA8182C90679800528E9C /* ArucoDetectionView.swift */,
+				78A4D6682C90664700122991 /* Assets.xcassets */,
+				78A4D66A2C90664700122991 /* Preview Content */,
+				78AD74DB2C90A77500B666D1 /* AQD-Heading-Hub-IOS-Bridging-Header.h */,
+			);
+			path = "AQD-Heading-Hub-IOS";
+			sourceTree = "<group>";
+		};
+		78A4D66A2C90664700122991 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				78A4D66B2C90664700122991 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		78AD74CF2C909DCC00B666D1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				78AD74CE2C909DCC00B666D1 /* opencv2.framework */,
+			);
+			name = Frameworks;
+			path = "AQD-Heading-Hub-IOS/Frameworks";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		78AD74D72C90A30C00B666D1 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78AD74DE2C90A77700B666D1 /* ArucoCV.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		78A4D6602C90664500122991 /* AQD-Heading-Hub-IOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 78A4D66F2C90664700122991 /* Build configuration list for PBXNativeTarget "AQD-Heading-Hub-IOS" */;
+			buildPhases = (
+				78AD74D72C90A30C00B666D1 /* Headers */,
+				78A4D65D2C90664500122991 /* Sources */,
+				78A4D65E2C90664500122991 /* Frameworks */,
+				78A4D65F2C90664500122991 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AQD-Heading-Hub-IOS";
+			productName = "AQD-Heading-Hub-IOS";
+			productReference = 78A4D6612C90664500122991 /* AQD-Heading-Hub-IOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		78A4D6592C90664500122991 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1540;
+				LastUpgradeCheck = 1540;
+				TargetAttributes = {
+					78A4D6602C90664500122991 = {
+						CreatedOnToolsVersion = 15.4;
+						LastSwiftMigration = 1540;
+					};
+				};
+			};
+			buildConfigurationList = 78A4D65C2C90664500122991 /* Build configuration list for PBXProject "AQD-Heading-Hub-IOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 78A4D6582C90664500122991;
+			productRefGroup = 78A4D6622C90664500122991 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				78A4D6602C90664500122991 /* AQD-Heading-Hub-IOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		78A4D65F2C90664500122991 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A4D66C2C90664700122991 /* Preview Assets.xcassets in Resources */,
+				78A4D6692C90664700122991 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		78A4D65D2C90664500122991 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				78A4D6672C90664500122991 /* ContentView.swift in Sources */,
+				78AD74DF2C90A77700B666D1 /* ArucoCV.mm in Sources */,
+				78A4D6652C90664500122991 /* AQD_Heading_Hub_IOSApp.swift in Sources */,
+				780EA8192C90679800528E9C /* ArucoDetectionView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		78A4D66D2C90664700122991 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/AQD-Heading-Hub-IOS/Frameworks/";
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/AQD-Heading-Hub-IOS/Frameworks/opencv2.framework/Headers/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		78A4D66E2C90664700122991 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/AQD-Heading-Hub-IOS/Frameworks/";
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/AQD-Heading-Hub-IOS/Frameworks/opencv2.framework/Headers/**";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		78A4D6702C90664700122991 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AQD-Heading-Hub-IOS/Preview Content\"";
+				DEVELOPMENT_TEAM = VFSH7UV2L2;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/AQD-Heading-Hub-IOS/Frameworks/",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/AQD-Heading-Hub-IOS/Frameworks/opencv2.framework/Headers";
+				INFOPLIST_KEY_CFBundleDisplayName = "AQD HUB IOS";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to scan ArUco markers.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aeroquadra.AQD-Heading-Hub-IOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AQD-Heading-Hub-IOS/AQD-Heading-Hub-IOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		78A4D6712C90664700122991 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"AQD-Heading-Hub-IOS/Preview Content\"";
+				DEVELOPMENT_TEAM = VFSH7UV2L2;
+				ENABLE_PREVIEWS = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(PROJECT_DIR)/AQD-Heading-Hub-IOS/Frameworks/",
+					"$(inherited)",
+				);
+				GENERATE_INFOPLIST_FILE = YES;
+				HEADER_SEARCH_PATHS = "$(PROJECT_DIR)/AQD-Heading-Hub-IOS/Frameworks/opencv2.framework/Headers";
+				INFOPLIST_KEY_CFBundleDisplayName = "AQD HUB IOS";
+				INFOPLIST_KEY_NSCameraUsageDescription = "We need camera access to scan ArUco markers.";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.3;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "aeroquadra.AQD-Heading-Hub-IOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "AQD-Heading-Hub-IOS/AQD-Heading-Hub-IOS-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		78A4D65C2C90664500122991 /* Build configuration list for PBXProject "AQD-Heading-Hub-IOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78A4D66D2C90664700122991 /* Debug */,
+				78A4D66E2C90664700122991 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		78A4D66F2C90664700122991 /* Build configuration list for PBXNativeTarget "AQD-Heading-Hub-IOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				78A4D6702C90664700122991 /* Debug */,
+				78A4D6712C90664700122991 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 78A4D6592C90664500122991 /* Project object */;
+}

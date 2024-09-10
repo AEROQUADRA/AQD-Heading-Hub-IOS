@@ -1,7 +1,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var detectedIDs: [Int] = []  // Declare detectedIDs as @State
+    @State private var detectedIDs: [Int] = []  // State variable for detected IDs
+    @State private var closestMarkerID: Int?
+    @State private var closestMarkerDistance: Float?
+    @State private var markerDetected = false   // Tracks if a marker has been detected
 
     var body: some View {
         NavigationView {
@@ -10,7 +13,15 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .padding()
 
-                NavigationLink(destination: DetectionViewController(detectedIDs: $detectedIDs)) {  // Pass the binding using $
+                // Button to start detection
+                NavigationLink(
+                    destination: DetectionViewController(
+                        detectedIDs: $detectedIDs,
+                        closestMarkerID: $closestMarkerID,
+                        closestMarkerDistance: $closestMarkerDistance,
+                        markerDetected: $markerDetected
+                    )
+                ) {
                     Text("Start ArUco Detection")
                         .font(.title)
                         .padding()

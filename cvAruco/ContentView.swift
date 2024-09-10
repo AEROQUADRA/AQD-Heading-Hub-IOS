@@ -1,10 +1,10 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var detectedIDs: [Int] = []  // State variable for detected IDs
+    @State private var detectedIDs: [Int] = []
     @State private var closestMarkerID: Int?
     @State private var closestMarkerDistance: Float?
-    @State private var markerDetected = false   // Tracks if a marker has been detected
+    @State private var markerDetected = false  // This will trigger navigation once marker is detected
 
     var body: some View {
         NavigationView {
@@ -13,7 +13,7 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .padding()
 
-                // Button to start detection
+                // Button to go to the ArUco detection view
                 NavigationLink(
                     destination: DetectionViewController(
                         detectedIDs: $detectedIDs,
@@ -28,6 +28,14 @@ struct ContentView: View {
                         .background(Color.blue)
                         .foregroundColor(.white)
                         .cornerRadius(10)
+                }
+
+                // This ensures that once markerDetected is true, you move to MoveController
+                NavigationLink(
+                    destination: MoveController(markerID: closestMarkerID, distance: closestMarkerDistance),
+                    isActive: $markerDetected
+                ) {
+                    EmptyView() // The navigation happens programmatically based on marker detection
                 }
             }
         }

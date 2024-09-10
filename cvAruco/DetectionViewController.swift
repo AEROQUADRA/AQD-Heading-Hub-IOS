@@ -2,7 +2,6 @@ import SwiftUI
 import ARKit
 import SceneKit
 
-// Define ArucoProperty struct to hold Aruco marker properties
 struct ArucoProperty {
     static let ArucoMarkerSize: Float64 = 0.05  // Marker size of 5 cm
 }
@@ -15,38 +14,30 @@ struct DetectionViewController: UIViewRepresentable {
 
     class Coordinator: NSObject, ARSCNViewDelegate, ARSessionDelegate {
         var parent: DetectionViewController
-        var mutexlock = false
+        var sceneView: ARSCNView?
 
         init(_ parent: DetectionViewController) {
             self.parent = parent
         }
 
-        // Conform to ARSCNViewDelegate
-        func renderer(_ renderer: SCNSceneRenderer, updateAtTime time: TimeInterval) {
-            // Handle any scene rendering updates if needed
-        }
-
-        // Conform to ARSessionDelegate
         func session(_ session: ARSession, didUpdate frame: ARFrame) {
-            if mutexlock { return }
+            // Check if the marker has already been detected to stop further processing.
+            guard !parent.markerDetected else {
+                print("Marker already detected, pausing session.")
+                pauseSession() // Pause the session to stop further updates.
+                return
+            }
 
-            mutexlock = true
             let pixelBuffer = frame.capturedImage
 
-            // Safely cast the result of estimatePose to [SKWorldTransform]
+            // Detect Aruco marker
             if let transMatrixArray = ArucoCV.estimatePose(pixelBuffer, withIntrinsics: frame.camera.intrinsics, andMarkerSize: ArucoProperty.ArucoMarkerSize) as? [SKWorldTransform] {
-
                 if !transMatrixArray.isEmpty {
                     DispatchQueue.main.async {
-                        // Store detected marker IDs
-                        self.parent.detectedIDs = transMatrixArray.map { Int($0.arucoId) }
-
-                        // Calculate distances and find the closest marker
                         var closestMarkerID: Int?
                         var closestDistance: Float = Float.greatestFiniteMagnitude
 
                         for transform in transMatrixArray {
-                            // Convert SCNMatrix4 to matrix_float4x4 using simd_float4x4
                             let matrix = simd_float4x4(transform.transform)
                             let distance = self.calculateDistance(from: matrix)
                             if distance < closestDistance {
@@ -55,34 +46,52 @@ struct DetectionViewController: UIViewRepresentable {
                             }
                         }
 
-                        // Update the closest marker information
+                        // Update detected marker details and stop further detection
                         if let closestMarkerID = closestMarkerID {
+                            self.parent.detectedIDs = transMatrixArray.map { Int($0.arucoId) }
                             self.parent.closestMarkerID = closestMarkerID
                             self.parent.closestMarkerDistance = closestDistance
                             self.parent.markerDetected = true
+
+                            print("Marker Detected: ID = \(closestMarkerID), Distance = \(closestDistance)")
+
+                            // Immediately pause the AR session and prevent further detection
+                            self.pauseSession()
+
+                            // Move to new screen once marker is detected
+                            self.moveToMoveController()
                         }
                     }
                 }
-            } else {
-                print("Failed to detect markers.")
             }
-
-            mutexlock = false
         }
 
-        // Function to calculate distance from transformation matrix
-        func calculateDistance(from matrix: matrix_float4x4) -> Float {
+        func calculateDistance(from matrix: simd_float4x4) -> Float {
             let translation = matrix.columns.3
             return sqrt(translation.x * translation.x + translation.y * translation.y + translation.z * translation.z)
+        }
+
+        // Ensure the session is paused properly
+        func pauseSession() {
+            guard let sceneView = sceneView else { return }
+            print("Pausing AR session.")
+            sceneView.session.pause()  // Stop the AR session to halt further updates.
+        }
+
+        func moveToMoveController() {
+            print("Navigating to new controller...")
+            // Navigation logic here, ensure session is paused
+            pauseSession()
         }
     }
 
     func makeCoordinator() -> Coordinator {
-        Coordinator(self)
+        return Coordinator(self)
     }
 
     func makeUIView(context: Context) -> ARSCNView {
         let sceneView = ARSCNView()
+        context.coordinator.sceneView = sceneView
         sceneView.delegate = context.coordinator
         sceneView.session.delegate = context.coordinator
 
@@ -93,46 +102,4 @@ struct DetectionViewController: UIViewRepresentable {
     }
 
     func updateUIView(_ uiView: ARSCNView, context: Context) {}
-}
-
-struct ArucoContentView: View {
-    @State private var detectedIDs: [Int] = []
-    @State private var closestMarkerID: Int?
-    @State private var closestMarkerDistance: Float?
-    @State private var markerDetected = false
-
-    var body: some View {
-        VStack {
-            if markerDetected {
-                // Navigate to MoveController when a marker is detected
-                NavigationLink(
-                    destination: MoveController(markerID: closestMarkerID, distance: closestMarkerDistance),
-                    isActive: $markerDetected
-                ) {
-                    EmptyView() // The navigation link is triggered when a marker is detected
-                }
-            }
-
-            DetectionViewController(
-                detectedIDs: $detectedIDs,
-                closestMarkerID: $closestMarkerID,
-                closestMarkerDistance: $closestMarkerDistance,
-                markerDetected: $markerDetected
-            )
-            .edgesIgnoringSafeArea(.all)
-            .frame(height: 500)
-
-            if !detectedIDs.isEmpty {
-                Text("Detected ArUco Marker IDs:")
-                ForEach(detectedIDs, id: \.self) { id in
-                    Text("Marker ID: \(id)")
-                        .font(.headline)
-                }
-            } else {
-                Text("No ArUco markers detected.")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-            }
-        }
-    }
 }

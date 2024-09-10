@@ -6,22 +6,24 @@ struct MoveController: View {
 
     var body: some View {
         VStack {
-            if let markerID = markerID, let distance = distance {
-                Text("Marker ID: \(markerID)")
-                    .font(.largeTitle)
-                    .padding()
+            Text("Marker Detected")
+                .font(.largeTitle)
+                .padding()
 
-                Text(String(format: "Distance: %.2f meters", distance))
+            if let markerID = markerID {
+                Text("Marker ID: \(markerID)")
                     .font(.title)
                     .padding()
-            } else {
-                Text("No marker detected.")
+            }
+
+            if let distance = distance {
+                Text("Distance: \(String(format: "%.2f", distance)) meters")
                     .font(.title)
                     .padding()
             }
 
             Spacer()
         }
-        .navigationTitle("Marker Details")
+        .navigationBarTitle("Marker Details", displayMode: .inline)
     }
 }

@@ -7,13 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		780DBF442C90C26B004B6C93 /* SKWorldTransform.m in Sources */ = {isa = PBXBuildFile; fileRef = 780DBF432C90C26B004B6C93 /* SKWorldTransform.m */; };
-		780DBF462C90C4F5004B6C93 /* MoveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DBF452C90C4F5004B6C93 /* MoveController.swift */; };
+		780DBF4C2C90D28E004B6C93 /* MoveController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 780DBF4B2C90D28E004B6C93 /* MoveController.swift */; };
 		78AD74E12C90B1F300B666D1 /* DetectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AD74E02C90B1F200B666D1 /* DetectionViewController.swift */; };
 		78AD74E92C90B7D400B666D1 /* AQD_Heading_Hub_IOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AD74E82C90B7D400B666D1 /* AQD_Heading_Hub_IOSApp.swift */; };
 		78AD74EB2C90B82600B666D1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78AD74EA2C90B82600B666D1 /* ContentView.swift */; };
 		78C2C8302C8E61B70071F009 /* opencv2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78C2C81C2C8E61A40071F009 /* opencv2.framework */; };
-		CA1A9D9A2249D1B300EDE121 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CA1A9D992249D1B300EDE121 /* Assets.xcassets */; };
 		CAB6B8AD224AD850005F49FD /* ArucoCV.mm in Sources */ = {isa = PBXBuildFile; fileRef = CAB6B8AC224AD850005F49FD /* ArucoCV.mm */; };
 /* End PBXBuildFile section */
 
@@ -31,9 +29,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		780DBF422C90C26B004B6C93 /* SKWorldTransform.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SKWorldTransform.h; path = ../../../.Trash/SKWorldTransform.h; sourceTree = "<group>"; };
-		780DBF432C90C26B004B6C93 /* SKWorldTransform.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SKWorldTransform.m; path = ../../../.Trash/SKWorldTransform.m; sourceTree = "<group>"; };
-		780DBF452C90C4F5004B6C93 /* MoveController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveController.swift; sourceTree = "<group>"; };
+		780DBF4B2C90D28E004B6C93 /* MoveController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoveController.swift; sourceTree = "<group>"; };
 		78AD74E02C90B1F200B666D1 /* DetectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetectionViewController.swift; sourceTree = "<group>"; };
 		78AD74E82C90B7D400B666D1 /* AQD_Heading_Hub_IOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AQD_Heading_Hub_IOSApp.swift; sourceTree = "<group>"; };
 		78AD74EA2C90B82600B666D1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -55,7 +51,6 @@
 		78C2C82D2C8E61A40071F009 /* UIColor+HSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+HSV.swift"; sourceTree = "<group>"; };
 		78C2C82E2C8E61A40071F009 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		CA1A9D8D2249D1B300EDE121 /* cvAruco.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cvAruco.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		CA1A9D992249D1B300EDE121 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CA1A9D9E2249D1B300EDE121 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CA1A9DA42249D5FA00EDE121 /* cvAruco-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cvAruco-Bridging-Header.h"; sourceTree = "<group>"; };
 		CA9A40B8224AB09F0065D169 /* ArucoCV.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ArucoCV.h; sourceTree = "<group>"; };
@@ -137,13 +132,10 @@
 			children = (
 				CA9A40B8224AB09F0065D169 /* ArucoCV.h */,
 				CAB6B8AC224AD850005F49FD /* ArucoCV.mm */,
-				780DBF422C90C26B004B6C93 /* SKWorldTransform.h */,
-				780DBF432C90C26B004B6C93 /* SKWorldTransform.m */,
 				78AD74E02C90B1F200B666D1 /* DetectionViewController.swift */,
-				780DBF452C90C4F5004B6C93 /* MoveController.swift */,
 				78AD74EA2C90B82600B666D1 /* ContentView.swift */,
+				780DBF4B2C90D28E004B6C93 /* MoveController.swift */,
 				78AD74E82C90B7D400B666D1 /* AQD_Heading_Hub_IOSApp.swift */,
-				CA1A9D992249D1B300EDE121 /* Assets.xcassets */,
 				CA1A9D9E2249D1B300EDE121 /* Info.plist */,
 				CA1A9DA42249D5FA00EDE121 /* cvAruco-Bridging-Header.h */,
 			);
@@ -219,7 +211,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CA1A9D9A2249D1B300EDE121 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,11 +221,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				780DBF462C90C4F5004B6C93 /* MoveController.swift in Sources */,
+				780DBF4C2C90D28E004B6C93 /* MoveController.swift in Sources */,
 				78AD74E12C90B1F300B666D1 /* DetectionViewController.swift in Sources */,
 				CAB6B8AD224AD850005F49FD /* ArucoCV.mm in Sources */,
 				78AD74E92C90B7D400B666D1 /* AQD_Heading_Hub_IOSApp.swift in Sources */,
-				780DBF442C90C26B004B6C93 /* SKWorldTransform.m in Sources */,
 				78AD74EB2C90B82600B666D1 /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

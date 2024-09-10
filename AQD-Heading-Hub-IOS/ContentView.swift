@@ -48,6 +48,15 @@ struct ContentView: View {
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }
+
+                // Button to navigate to SettingsView
+                NavigationLink(destination: SettingsView()) {
+                    Text("Settings")
+                        .padding()
+                        .background(Color.orange)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
             }
             .padding()
         }

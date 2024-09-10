@@ -19,6 +19,7 @@
 		78C9379E2C910214000E5A9C /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9379D2C910214000E5A9C /* NetworkService.swift */; };
 		78C937A02C910477000E5A9C /* CommandService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9379F2C910477000E5A9C /* CommandService.swift */; };
 		78C937A22C91051A000E5A9C /* CommandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C937A12C91051A000E5A9C /* CommandsView.swift */; };
+		78D3DEA32C910F7C0090CD51 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D3DEA22C910F7C0090CD51 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		78C9379D2C910214000E5A9C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		78C9379F2C910477000E5A9C /* CommandService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandService.swift; sourceTree = "<group>"; };
 		78C937A12C91051A000E5A9C /* CommandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsView.swift; sourceTree = "<group>"; };
+		78D3DEA22C910F7C0090CD51 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				78A4D66A2C90664700122991 /* Preview Content */,
 				78AD74DB2C90A77500B666D1 /* AQD-Heading-Hub-IOS-Bridging-Header.h */,
 				78C937A12C91051A000E5A9C /* CommandsView.swift */,
+				78D3DEA22C910F7C0090CD51 /* SettingsView.swift */,
 			);
 			path = "AQD-Heading-Hub-IOS";
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				78A4D6672C90664500122991 /* ContentView.swift in Sources */,
 				78AD74DF2C90A77700B666D1 /* ArucoCV.mm in Sources */,
 				78C937A22C91051A000E5A9C /* CommandsView.swift in Sources */,
+				78D3DEA32C910F7C0090CD51 /* SettingsView.swift in Sources */,
 				78C937A02C910477000E5A9C /* CommandService.swift in Sources */,
 				78C937982C90EA17000E5A9C /* MarkerDetailView.swift in Sources */,
 				78C9379A2C90ECFE000E5A9C /* ArucoDetectionView.swift in Sources */,

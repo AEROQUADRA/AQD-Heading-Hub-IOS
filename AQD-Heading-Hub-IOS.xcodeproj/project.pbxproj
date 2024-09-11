@@ -20,6 +20,10 @@
 		78C937A02C910477000E5A9C /* CommandService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C9379F2C910477000E5A9C /* CommandService.swift */; };
 		78C937A22C91051A000E5A9C /* CommandsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C937A12C91051A000E5A9C /* CommandsView.swift */; };
 		78D3DEA32C910F7C0090CD51 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D3DEA22C910F7C0090CD51 /* SettingsView.swift */; };
+		78D3DEA52C9114940090CD51 /* CameraCalibrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D3DEA42C9114940090CD51 /* CameraCalibrationView.swift */; };
+		78D3DEA72C9115A90090CD51 /* CameraCalibration.mm in Sources */ = {isa = PBXBuildFile; fileRef = 78D3DEA62C9115A80090CD51 /* CameraCalibration.mm */; };
+		78D3DEA92C9116CC0090CD51 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78D3DEA82C9116CC0090CD51 /* CameraView.swift */; };
+		78D3DEAB2C9117510090CD51 /* CameraCalibration.h in Headers */ = {isa = PBXBuildFile; fileRef = 78D3DEAA2C9117510090CD51 /* CameraCalibration.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +43,10 @@
 		78C9379F2C910477000E5A9C /* CommandService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandService.swift; sourceTree = "<group>"; };
 		78C937A12C91051A000E5A9C /* CommandsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommandsView.swift; sourceTree = "<group>"; };
 		78D3DEA22C910F7C0090CD51 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		78D3DEA42C9114940090CD51 /* CameraCalibrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraCalibrationView.swift; sourceTree = "<group>"; };
+		78D3DEA62C9115A80090CD51 /* CameraCalibration.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CameraCalibration.mm; sourceTree = "<group>"; };
+		78D3DEA82C9116CC0090CD51 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		78D3DEAA2C9117510090CD51 /* CameraCalibration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CameraCalibration.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,14 +95,18 @@
 				78C937972C90EA17000E5A9C /* MarkerDetailView.swift */,
 				78AD74DC2C90A77700B666D1 /* ArucoCV.h */,
 				78AD74DD2C90A77700B666D1 /* ArucoCV.mm */,
+				78D3DEAA2C9117510090CD51 /* CameraCalibration.h */,
+				78D3DEA62C9115A80090CD51 /* CameraCalibration.mm */,
 				78C9379D2C910214000E5A9C /* NetworkService.swift */,
 				78C9379F2C910477000E5A9C /* CommandService.swift */,
 				78A4D6642C90664500122991 /* AQD_Heading_Hub_IOSApp.swift */,
 				78A4D6682C90664700122991 /* Assets.xcassets */,
-				78A4D66A2C90664700122991 /* Preview Content */,
 				78AD74DB2C90A77500B666D1 /* AQD-Heading-Hub-IOS-Bridging-Header.h */,
 				78C937A12C91051A000E5A9C /* CommandsView.swift */,
 				78D3DEA22C910F7C0090CD51 /* SettingsView.swift */,
+				78D3DEA42C9114940090CD51 /* CameraCalibrationView.swift */,
+				78D3DEA82C9116CC0090CD51 /* CameraView.swift */,
+				78A4D66A2C90664700122991 /* Preview Content */,
 			);
 			path = "AQD-Heading-Hub-IOS";
 			sourceTree = "<group>";
@@ -123,6 +135,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D3DEAB2C9117510090CD51 /* CameraCalibration.h in Headers */,
 				78AD74DE2C90A77700B666D1 /* ArucoCV.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -199,11 +212,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				78D3DEA52C9114940090CD51 /* CameraCalibrationView.swift in Sources */,
 				78A4D6672C90664500122991 /* ContentView.swift in Sources */,
 				78AD74DF2C90A77700B666D1 /* ArucoCV.mm in Sources */,
+				78D3DEA92C9116CC0090CD51 /* CameraView.swift in Sources */,
 				78C937A22C91051A000E5A9C /* CommandsView.swift in Sources */,
 				78D3DEA32C910F7C0090CD51 /* SettingsView.swift in Sources */,
 				78C937A02C910477000E5A9C /* CommandService.swift in Sources */,
+				78D3DEA72C9115A90090CD51 /* CameraCalibration.mm in Sources */,
 				78C937982C90EA17000E5A9C /* MarkerDetailView.swift in Sources */,
 				78C9379A2C90ECFE000E5A9C /* ArucoDetectionView.swift in Sources */,
 				78C9379E2C910214000E5A9C /* NetworkService.swift in Sources */,

@@ -4,6 +4,7 @@ struct ContentView: View {
     @State private var detectedMarker: (id: Int, distance: Double)? = nil
     @State private var isShowingMarkerDetails = false
     @StateObject private var networkService = NetworkService()  // Network Monitoring
+    @State private var isCalibrated: Bool = UserDefaults.standard.bool(forKey: "isCalibrated")  // Camera calibration status
 
     var body: some View {
         NavigationView {
@@ -40,6 +41,10 @@ struct ContentView: View {
                 .padding()
                 .foregroundColor(.gray)
 
+                // Camera Calibration Status
+                Text(isCalibrated ? "Camera Calibrated" : "Camera Not Calibrated")
+                    .foregroundColor(isCalibrated ? .green : .red)
+
                 // Button to navigate to CommandsView
                 NavigationLink(destination: CommandsView()) {
                     Text("Commands")
@@ -54,6 +59,15 @@ struct ContentView: View {
                     Text("Settings")
                         .padding()
                         .background(Color.orange)
+                        .foregroundColor(.white)
+                        .cornerRadius(10)
+                }
+
+                // Button to navigate to Camera Calibration View
+                NavigationLink(destination: CameraCalibrationView(isCalibrated: $isCalibrated)) {
+                    Text("Calibrate Camera")
+                        .padding()
+                        .background(Color.purple)
                         .foregroundColor(.white)
                         .cornerRadius(10)
                 }

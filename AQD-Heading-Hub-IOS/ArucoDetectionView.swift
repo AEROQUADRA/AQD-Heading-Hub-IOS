@@ -4,7 +4,7 @@ import AVFoundation
 // UIViewControllerRepresentable for Aruco Detection
 struct ArucoDetectionView: UIViewControllerRepresentable {
     @Binding var detectedMarker: (id: Int, distance: Double)?
-    @Binding var isShowingMarkerDetails: Bool // To track when to show the details
+    @Binding var isMoving: Bool // Track when to move to the next view
 
     func makeCoordinator() -> Coordinator {
         Coordinator(self)
@@ -28,11 +28,11 @@ struct ArucoDetectionView: UIViewControllerRepresentable {
             self.parent = parent
         }
 
-        // Handle marker detection, navigation, and view dismissal
+        // Handle marker detection and transition to MoveView
         func handleMarkerDetected(markerId: Int, markerDistance: Double) {
             DispatchQueue.main.async {
-                // When a marker is detected, set the state to show marker details
-                self.parent.isShowingMarkerDetails = true
+                // When a marker is detected, transition to MoveView
+                self.parent.isMoving = true
             }
         }
     }
@@ -89,7 +89,7 @@ class ArucoDetectionViewController: UIViewController, AVCaptureVideoDataOutputSa
     }
 
     func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        print("isDetecting status: \(isDetecting)") // Print the current status of isDetecting
+        print("isDetecting status: \(isDetecting)")
 
         // Avoid processing frames if marker is already detected
         guard isDetecting else {
@@ -125,4 +125,3 @@ class ArucoDetectionViewController: UIViewController, AVCaptureVideoDataOutputSa
         }
     }
 }
-
